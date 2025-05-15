@@ -1,5 +1,4 @@
-package spes.myapplication.model;
-
+package com.example.ceng106_oop;
 public class ToplanmaAlani {
 
 }

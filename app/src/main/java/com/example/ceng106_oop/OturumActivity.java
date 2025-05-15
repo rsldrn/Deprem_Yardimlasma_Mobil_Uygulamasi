@@ -14,8 +14,8 @@ import java.util.List;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import spes.example.oop_proje.ProfileActivity;
-import spes.example.oop_proje.SecondActivity;
+//import spes.example.oop_proje.ProfileActivity;
+//import spes.example.oop_proje.SecondActivity;
 
 public class OturumActivity extends AppCompatActivity {
 

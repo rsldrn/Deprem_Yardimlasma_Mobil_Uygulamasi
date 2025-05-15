@@ -1,5 +1,4 @@
-package spes.myapplication;
-
+package com.example.ceng106_oop;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.ArrayAdapter;
@@ -17,9 +16,9 @@ import java.util.List;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import spes.myapplication.model.modelIhtiyacItem;
-import spes.myapplication.network.ApiService;
-import spes.myapplication.network.RetrofitClient;
+//import spes.myapplication.model.modelIhtiyacItem;
+//import spes.myapplication.network.ApiService;
+//import spes.myapplication.network.RetrofitClient;
 
 public class ListActivity extends AppCompatActivity {
 

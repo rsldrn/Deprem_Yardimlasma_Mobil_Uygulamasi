@@ -19,10 +19,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.android.volley.Request;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.example.oturum_sayfasi.ApiClient;
-import com.example.oturum_sayfasi.R;
-import com.example.oturum_sayfasi.SupabaseService;
-import com.example.oturum_sayfasi.UserModel;
+//import com.example.oturum_sayfasi.ApiClient;
+//import com.example.oturum_sayfasi.R;
+//import com.example.oturum_sayfasi.SupabaseService;
+//import com.example.oturum_sayfasi.UserModel;
 
 import org.json.JSONArray;
 import org.json.JSONException;

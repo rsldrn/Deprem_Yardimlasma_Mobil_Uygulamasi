@@ -1,5 +1,4 @@
-package spes.myapplication.network;
-
+package com.example.ceng106_oop;
 import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
