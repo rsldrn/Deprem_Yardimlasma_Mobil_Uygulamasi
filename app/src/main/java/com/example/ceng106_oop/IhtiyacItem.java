@@ -1,5 +1,4 @@
-package spes.myapplication;
-
+package com.example.ceng106_oop;
 public class IhtiyacItem {
     public String item;
     public String province;

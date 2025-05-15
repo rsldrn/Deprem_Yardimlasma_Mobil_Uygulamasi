@@ -1,5 +1,4 @@
-package com.example.oturum_sayfasi;
-
+package com.example.ceng106_oop;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;

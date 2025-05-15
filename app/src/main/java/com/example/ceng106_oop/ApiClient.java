@@ -1,5 +1,4 @@
-package com.example.oturum_sayfasi;
-
+package com.example.ceng106_oop;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 

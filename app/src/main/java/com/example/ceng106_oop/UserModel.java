@@ -1,5 +1,4 @@
-package com.example.oturum_sayfasi;
-
+package com.example.ceng106_oop;
 public class UserModel {
     private String id;
     private String username;

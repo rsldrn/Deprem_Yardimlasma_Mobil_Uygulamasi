@@ -1,5 +1,4 @@
-package spes.myapplication;
-
+package com.example.ceng106_oop;
 import android.view.View;
 import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;

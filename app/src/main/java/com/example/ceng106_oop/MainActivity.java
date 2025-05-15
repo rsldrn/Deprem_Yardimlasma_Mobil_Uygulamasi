@@ -1,5 +1,4 @@
 package com.example.ceng106_oop;
-
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;

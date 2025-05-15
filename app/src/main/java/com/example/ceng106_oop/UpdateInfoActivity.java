@@ -1,5 +1,4 @@
-package spes.example.oop_proje;
-
+package com.example.ceng106_oop;
 import android.os.Bundle;
 
 import android.content.Intent;
