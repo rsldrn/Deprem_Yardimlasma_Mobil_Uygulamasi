@@ -22,7 +22,7 @@ public class NavigationBar {
                 bottomNavigationView.setSelectedItemId(R.id.nav_sender);
             }
 
-        /*bottomNavigationView.setOnItemSelectedListener(item -> {
+        bottomNavigationView.setOnItemSelectedListener(item -> {
             int id = item.getItemId();
             if (id == R.id.nav_sender) {
                 if (!(activity instanceof ListActivity)) {
@@ -33,13 +33,14 @@ public class NavigationBar {
                 if (!(activity instanceof NeedsFormActivity)) {
                     activity.startActivity(new Intent(activity, NeedsFormActivity.class));
                 }
-                return true;
-            } else if (id == R.id.nav_my_requests) {
-                if (!(activity instanceof TakipSayafasiActivity)) {
-                    activity.startActivity(new Intent(activity, TakipSayafasiActivity.class));
-                }
-                return true;
-            } else if (id == R.id.nav_profile) {
+                return true;}
+//            } else if (id == R.id.nav_my_requests) {
+//                if (!(activity instanceof TakipSayafasiActivity)) {
+//                    activity.startActivity(new Intent(activity, TakipSayafasiActivity.class));
+//                }
+//                return true;
+//            }
+                else if (id == R.id.nav_profile) {
                 if (!(activity instanceof ProfileActivity)) {
                     activity.startActivity(new Intent(activity, ProfileActivity.class));
                 }
@@ -48,23 +49,23 @@ public class NavigationBar {
             return false;
         });
 
-         */
-            bottomNavigationView.setOnItemSelectedListener(item -> {
-                int id = item.getItemId();
-                if (id == R.id.nav_sender) {
-                    Toast.makeText(activity, "Gönderici sekmesine tıklandı", Toast.LENGTH_SHORT).show();
-                    return true;
-                } else if (id == R.id.nav_new_request) {
-                    Toast.makeText(activity, "Yeni Talep sekmesine tıklandı", Toast.LENGTH_SHORT).show();
-                    return true;
-                } else if (id == R.id.nav_my_requests) {
-                    Toast.makeText(activity, "Taleplerim sekmesine tıklandı", Toast.LENGTH_SHORT).show();
-                    return true;
-                } else if (id == R.id.nav_profile) {
-                    Toast.makeText(activity, "Profil sekmesine tıklandı", Toast.LENGTH_SHORT).show();
-                    return true;
-                }
-                return false;
-            });
+
+//            bottomNavigationView.setOnItemSelectedListener(item -> {
+//                int id = item.getItemId();
+//                if (id == R.id.nav_sender) {
+//                    Toast.makeText(activity, "Gönderici sekmesine tıklandı", Toast.LENGTH_SHORT).show();
+//                    return true;
+//                } else if (id == R.id.nav_new_request) {
+//                    Toast.makeText(activity, "Yeni Talep sekmesine tıklandı", Toast.LENGTH_SHORT).show();
+//                    return true;
+//                } else if (id == R.id.nav_my_requests) {
+//                    Toast.makeText(activity, "Taleplerim sekmesine tıklandı", Toast.LENGTH_SHORT).show();
+//                    return true;
+//                } else if (id == R.id.nav_profile) {
+//                    Toast.makeText(activity, "Profil sekmesine tıklandı", Toast.LENGTH_SHORT).show();
+//                    return true;
+//                }
+//                return false;
+//            });
         }
     }

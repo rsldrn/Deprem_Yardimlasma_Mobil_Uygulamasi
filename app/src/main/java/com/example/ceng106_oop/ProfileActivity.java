@@ -33,7 +33,7 @@ import retrofit2.Response;
 // biktim
 public class ProfileActivity extends AppCompatActivity {
     private TextView textViewName,textViewSurname,textViewBirthDay,textViewBirthMonth,textViewBirthYear,textViewGender;
-    private Button updateInfoButton;
+    private Button updateInfoButton, buttonNeeds;
     private final int UPDATE_REQUEST_CODE = 1;
 
 
@@ -52,6 +52,14 @@ public class ProfileActivity extends AppCompatActivity {
 
         // Güncelleme butonunu bağla
         updateInfoButton = findViewById(R.id.buttonUpdateInfo);
+
+        buttonNeeds= findViewById(R.id.buttonNeeds);
+
+        buttonNeeds.setOnClickListener(view -> {
+            Intent intent = new Intent(ProfileActivity.this, NeedsFormActivity.class);
+            startActivity(intent);
+        });
+
 
         //displayUserInfoFromIntent(getIntent());
 
