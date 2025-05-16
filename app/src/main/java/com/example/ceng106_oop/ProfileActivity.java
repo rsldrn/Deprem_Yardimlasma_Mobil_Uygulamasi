@@ -42,6 +42,7 @@ public class ProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
+        NavigationBar.setupNavigationBar(this, R.id.nav_profile);
         // TextView'leri bağla
         textViewName = findViewById(R.id.textViewName);
         textViewSurname = findViewById(R.id.textViewSurname);
@@ -57,6 +58,7 @@ public class ProfileActivity extends AppCompatActivity {
 
         buttonNeeds.setOnClickListener(view -> {
             Intent intent = new Intent(ProfileActivity.this, NeedsFormActivity.class);
+            intent.putExtra("id", getIntent().getStringExtra("id")); // ← id burada veriliyor
             startActivity(intent);
         });
 

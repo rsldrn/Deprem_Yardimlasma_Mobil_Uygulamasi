@@ -2,11 +2,14 @@ package com.example.ceng106_oop;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import android.content.SharedPreferences;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
@@ -44,6 +47,8 @@ public class NeedsFormActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Talep Formu");
 
+        NavigationBar.setupNavigationBar(this, R.id.nav_profile);
+
         autoCategory = findViewById(R.id.autoCategory);
         autoItem = findViewById(R.id.autoItem);
         editProvince = findViewById(R.id.editProvince);
@@ -64,6 +69,11 @@ public class NeedsFormActivity extends AppCompatActivity {
         setupDropdowns();
 
         btnSave.setOnClickListener(v -> {
+            Log.d("DEBUG", "==> KAYDET BUTONUNA BASILDI");
+            SharedPreferences prefs = getSharedPreferences("UserPrefs", MODE_PRIVATE);
+            String userId = prefs.getString("user_id", null);
+            Log.d("DEBUG", "user_id gönderiliyor: " + userId);
+
             btnSave.setEnabled(false);
             btnSave.setText("Gönderiliyor...");
             String category = autoCategory.getText().toString().trim();
@@ -111,8 +121,19 @@ public class NeedsFormActivity extends AppCompatActivity {
                 return;
             }
 
+
+
+
+            if (userId == null) {
+                Toast.makeText(this, "Kullanıcı oturumu bulunamadı!", Toast.LENGTH_SHORT).show();
+                btnSave.setEnabled(true);
+                btnSave.setText("Kaydet");
+                return;
+            }
+
             // Veriyi Supabase'e gönder
             Needs newNeed = new Needs();
+            newNeed.user_id = userId;
             newNeed.category = category;
             newNeed.item = item;
             newNeed.province = province;

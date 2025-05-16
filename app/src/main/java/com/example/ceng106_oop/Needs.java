@@ -1,6 +1,10 @@
 package com.example.ceng106_oop;
 
+import com.google.gson.annotations.SerializedName;
+
 public class Needs {
+    @SerializedName("user_id")
+    public String user_id;
     public String category;
     public String item;
     public String province;

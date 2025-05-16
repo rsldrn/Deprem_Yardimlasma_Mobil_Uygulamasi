@@ -1,5 +1,6 @@
 package com.example.ceng106_oop;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -110,6 +111,12 @@ public class OturumActivity extends AppCompatActivity {
                     UserModel user = response.body().get(0);
                     if (user.getPassword().equals(password)) {
                         Toast.makeText(OturumActivity.this, "Giriş başarılı!", Toast.LENGTH_SHORT).show();
+
+                        // 🔽 BURASI: user_id'yi SharedPreferences'e kaydet
+                        SharedPreferences prefs = getSharedPreferences("UserPrefs", MODE_PRIVATE);
+                        SharedPreferences.Editor editor = prefs.edit();
+                        editor.putString("user_id", user.getId()); // UUID burada geliyor
+                        editor.apply();
 
                         // Kullanıcının kayıt formunu daha önce doldurup doldurmadığını kontrol et
                         if (user.getName() != null && !user.getName().isEmpty()) {
