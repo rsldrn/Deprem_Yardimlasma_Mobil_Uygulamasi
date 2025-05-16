@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="false"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Toolbar -->
+        <!-- Toolbar -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:title="Takip Ekranı"
+            android:titleTextColor="@android:color/white"
+            android:paddingTop="24dp"
+            android:elevation="4dp"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <!-- Mevcut Taleplerim -->
+    <TextView
+        android:id="@+id/txtTalepler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mevcut Taleplerim"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:paddingBottom="8dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/taleplerRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:importantForAccessibility="no"
+        android:overScrollMode="never"
+        android:nestedScrollingEnabled="true"
+        android:scrollbars="vertical" />
+
+
+    <!-- Mevcut Gönderilerim -->
+    <TextView
+        android:id="@+id/txtGonderiler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mevcut Gönderilerim"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:paddingTop="16dp"
+        android:paddingBottom="8dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/gonderilerRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:importantForAccessibility="no"
+        android:overScrollMode="never"
+        android:nestedScrollingEnabled="true"
+        android:scrollbars="vertical" />
+
+
+</LinearLayout>
+
+
+
+
