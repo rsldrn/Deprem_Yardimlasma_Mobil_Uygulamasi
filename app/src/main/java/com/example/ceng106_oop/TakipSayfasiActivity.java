@@ -1,4 +1,4 @@
-package com.example.myapp.activities;
+package com.example.ceng106_oop;
 
 import android.graphics.Color;
 import android.os.Build;
@@ -13,13 +13,13 @@ import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.myapp.R;
-import com.example.myapp.adapters.GonderilerAdapter;
-import com.example.myapp.adapters.TaleplerAdapter;
-import com.example.myapp.models.Gonderi;
-import com.example.myapp.models.Talep;
-import com.example.myapp.supabase.SupabaseClient;
-import com.example.myapp.supabase.SupabaseServiceforTakip;
+import com.example.ceng106_oop.R;
+import com.example.ceng106_oop.GonderilerAdapter;
+import com.example.ceng106_oop.TaleplerAdapter;
+import com.example.ceng106_oop.Gonderi;
+import com.example.ceng106_oop.Talep;
+import com.example.ceng106_oop.SupabaseClient;
+import com.example.ceng106_oop.SupabaseServiceforTakip;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -50,15 +50,16 @@ public class TakipSayfasiActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         setTitle(" ");
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            getWindow().setStatusBarColor(ContextCompat.getColor(this, R.color.colorPrimary));
 
-
-        }
-        else {
-            getWindow().getDecorView().setSystemUiVisibility(
-                    View.SYSTEM_UI_FLAG_LAYOUT_STABLE | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
-        }
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+//            getWindow().setStatusBarColor(ContextCompat.getColor(this, R.color.colorPrimary));
+//
+//
+//        }
+//        else {
+//            getWindow().getDecorView().setSystemUiVisibility(
+//                    View.SYSTEM_UI_FLAG_LAYOUT_STABLE | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
+//        }
 
 
         // Talepler RecyclerView

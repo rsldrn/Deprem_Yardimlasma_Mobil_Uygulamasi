@@ -1,4 +1,4 @@
-package com.example.myapp.models;
+package com.example.ceng106_oop;
 
 public class Gonderi {
     private String id;

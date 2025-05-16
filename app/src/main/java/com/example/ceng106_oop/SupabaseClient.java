@@ -1,4 +1,4 @@
-package com.example.myapp.supabase;
+package com.example.ceng106_oop;
 
 import android.util.Log;
 

@@ -1,4 +1,4 @@
-package com.example.myapp.models;
+package com.example.ceng106_oop;
 
 import com.google.gson.annotations.SerializedName;
 

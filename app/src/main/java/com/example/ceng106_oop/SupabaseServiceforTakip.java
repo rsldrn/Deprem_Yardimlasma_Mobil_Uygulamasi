@@ -1,7 +1,7 @@
-package com.example.myapp.supabase;
+package com.example.ceng106_oop;
 
-import com.example.myapp.models.Talep;
-import com.example.myapp.models.Gonderi;
+import com.example.ceng106_oop.Talep;
+import com.example.ceng106_oop.Gonderi;
 
 import java.util.List;
 import java.util.Map;

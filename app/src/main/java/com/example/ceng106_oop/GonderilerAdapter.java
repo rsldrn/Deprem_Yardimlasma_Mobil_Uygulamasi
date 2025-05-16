@@ -1,4 +1,4 @@
-package com.example.myapp.adapters;
+package com.example.ceng106_oop;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,10 +9,10 @@ import android.widget.Toast;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.myapp.R;
-import com.example.myapp.models.Gonderi;
-import com.example.myapp.supabase.SupabaseClient;
-import com.example.myapp.supabase.SupabaseServiceforTakip;
+import com.example.ceng106_oop.R;
+import com.example.ceng106_oop.Gonderi;
+import com.example.ceng106_oop.SupabaseClient;
+import com.example.ceng106_oop.SupabaseServiceforTakip;
 
 import java.util.HashMap;
 import java.util.List;
@@ -66,6 +66,7 @@ public class GonderilerAdapter extends RecyclerView.Adapter<GonderilerAdapter.Vi
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         Gonderi gonderi = gonderiList.get(position);
+        holder.btnTeslimEt.setVisibility(View.GONE);
 
         holder.tvCategory.setText("Kategori: " + gonderi.getCategory());
         holder.tvItem.setText("İçerik: " + gonderi.getItem());

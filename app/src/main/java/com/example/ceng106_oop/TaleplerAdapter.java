@@ -1,4 +1,4 @@
-package com.example.myapp.adapters;
+package com.example.ceng106_oop;
 
 import android.content.Context;
 import android.util.Log;
@@ -11,10 +11,10 @@ import android.widget.Toast;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.myapp.R;
-import com.example.myapp.models.Talep;
-import com.example.myapp.supabase.SupabaseClient;
-import com.example.myapp.supabase.SupabaseServiceforTakip;
+import com.example.ceng106_oop.R;
+import com.example.ceng106_oop.Talep;
+import com.example.ceng106_oop.SupabaseClient;
+import com.example.ceng106_oop.SupabaseServiceforTakip;
 
 import java.util.HashMap;
 import java.util.List;
