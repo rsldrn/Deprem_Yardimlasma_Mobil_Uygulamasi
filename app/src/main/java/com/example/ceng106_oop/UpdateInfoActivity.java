@@ -10,6 +10,7 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
 import com.android.volley.Request;
 import com.android.volley.toolbox.JsonObjectRequest;
@@ -34,6 +35,7 @@ public class UpdateInfoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update_info);
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
 
         editTextName = findViewById(R.id.editTextName);
         editTextSurname = findViewById(R.id.editTextSurname);
@@ -102,7 +104,7 @@ public class UpdateInfoActivity extends AppCompatActivity {
 
     private void updateUserInfoOnSupabase(String id, String name, String surname, String gender, int day, int month, int year) {
         id = getIntent().getStringExtra("id"); // UUID olarak gelen id alınmalı
-        String url = "https://wutjjjjlbwpnwznbwcks.supabase.co/rest/v1/oturum?id=eq." + id;
+        String url = "https://dcolkghkjgbriquchvza.supabase.co/rest/v1/users?id=eq." + id;
 
         JSONObject jsonBody = new JSONObject();
         try {
@@ -153,8 +155,8 @@ public class UpdateInfoActivity extends AppCompatActivity {
             @Override
             public Map<String, String> getHeaders() {
                 Map<String, String> headers = new HashMap<>();
-                headers.put("apikey", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Ind1dGpqampsYndwbnd6bmJ3Y2tzIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc0NTM5Mzc0OCwiZXhwIjoyMDYwOTY5NzQ4fQ.FSzyUvY7tKV-kewlTy-84xQk7HpCqirdCelkymoUrMI"); // güvenlik için bir ENV dosyasında tutmanı öneririm
-                headers.put("Authorization", "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Ind1dGpqampsYndwbnd6bmJ3Y2tzIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc0NTM5Mzc0OCwiZXhwIjoyMDYwOTY5NzQ4fQ.FSzyUvY7tKV-kewlTy-84xQk7HpCqirdCelkymoUrMI");
+                headers.put("apikey", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRjb2xrZ2hramdicmlxdWNodnphIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDY4MDgyNjgsImV4cCI6MjA2MjM4NDI2OH0.H1w4ZUG24RATNi3_At778X2c01R-twxpvKz8mBHLrYg"); // güvenlik için bir ENV dosyasında tutmanı öneririm
+                headers.put("Authorization", "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRjb2xrZ2hramdicmlxdWNodnphIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDY4MDgyNjgsImV4cCI6MjA2MjM4NDI2OH0.H1w4ZUG24RATNi3_At778X2c01R-twxpvKz8mBHLrYg");
                 headers.put("Content-Type", "application/json");
                 headers.put("Prefer", "return=representation");
                 return headers;

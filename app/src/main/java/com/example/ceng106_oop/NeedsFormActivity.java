@@ -33,7 +33,7 @@ public class NeedsFormActivity extends AppCompatActivity {
 
     private AutoCompleteTextView autoCategory, autoItem;
     private EditText editProvince, editDistrict, editNeighborhood, editStreet, editBuilding;
-    private Button btnSave,buttonList;
+    private Button btnSave;
 
     private final Map<String, List<String>> itemMap = new HashMap<>();
 
@@ -57,14 +57,6 @@ public class NeedsFormActivity extends AppCompatActivity {
         editStreet = findViewById(R.id.editStreet);
         editBuilding = findViewById(R.id.editBuilding);
         btnSave = findViewById(R.id.btnSave);
-
-
-        buttonList= findViewById(R.id.buttonList);
-
-        buttonList.setOnClickListener(view -> {
-            Intent intent = new Intent(NeedsFormActivity.this, ListActivity.class);
-            startActivity(intent);
-        });
 
         setupDropdowns();
 
