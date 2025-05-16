@@ -47,7 +47,7 @@ public class NeedsFormActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Talep Formu");
 
-        NavigationBar.setupNavigationBar(this, R.id.nav_profile);
+        NavigationBar.setupNavigationBar(this, R.id.nav_new_request);
 
         autoCategory = findViewById(R.id.autoCategory);
         autoItem = findViewById(R.id.autoItem);

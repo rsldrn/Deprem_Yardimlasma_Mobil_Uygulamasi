@@ -35,7 +35,7 @@ public class ListActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        NavigationBar.setupNavigationBar(this, R.id.nav_profile);
+        NavigationBar.setupNavigationBar(this, R.id.nav_sender);
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
 
         listView = findViewById(R.id.listView);
