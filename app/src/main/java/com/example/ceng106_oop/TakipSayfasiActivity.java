@@ -49,6 +49,7 @@ public class TakipSayfasiActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         setTitle(" ");
+        NavigationBar.setupNavigationBar(this, R.id.nav_my_requests);
 
 
 //        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
