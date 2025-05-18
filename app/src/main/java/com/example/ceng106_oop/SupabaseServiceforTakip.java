@@ -15,22 +15,22 @@ import retrofit2.http.Query;
 public interface SupabaseServiceforTakip {
 
     @GET("needs?select=*")
-    Call<List<Talep>> getTalepler();
+    Call<List<Talep>> getTalepler(@Query("user_id") String userIdFilter);
 
 //     ----- Talepler: PATCH -----
 
     @PATCH("needs")
-    Call<Void> updateTalepDurum(@Query("id") String idQuery, @Body Map<String, Object> body);
+    Call<Void> updateTalepDurum(@Query("id") String idEq, @Body Map<String, Object> body);
 
 
 //     ----- Gönderiler: GET -----
 
     @GET("needs?select=*")
-    Call<List<Gonderi>> getGonderiler();
+    Call<List<Gonderi>> getGonderiler(@Query("sender_id") String userIdFilter);
 
     // ----- Gönderiler: PATCH -----
 
     @PATCH("needs")
-    Call<Void> updateGonderiDurum(@Query("id") String idQuery, @Body Map<String, Object> body);
+    Call<Void> updateGonderiDurum(@Query("id") String idEq, @Body Map<String, Object> body);
 
 }
